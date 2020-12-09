@@ -9,20 +9,8 @@ library(viridis)
 library(tidyr)
 library(gganimate)
 
-###This is 
+###access data at ACLED website using personal key
 
-#This is the url with my personal key included
-url <- "https://api.acleddata.com/acled/read/?key=6X5B*acL3iUtvyKaIKml1234&email=calhoon.brian@gmail.com"
-
-#Western Africa January 2020 data
-test <- acled.api(
-  email.address = "calhoon.brian@gmail.com"
-  , access.key = "6X5B*acL3iUtvyKaIKml"
-  , region = "Western Africa"
-  , start.date = "2020-01-01"
-  , end.date = "2020-01-31"
-  , dyadic = FALSE
-  )
 
 write_xlsx(test, "WAconflicts202001.xlsx")
 
@@ -126,40 +114,3 @@ animate(anim
 #save the animation
 anim_save("WestAfricaEventsDaily.gif"
           , animation = last_animation())
-
-###Adapt the above animation to a bar chart race#####
-
-rank_data_run <- grouped_data %>%
-  group_by(event_date) %>%
-  arrange(event_date, -number) %>%
-  mutate(rank = 1:n())
-
-
-#using stat = "count"
-ggplot(dat, aes(x = event_type)) +
-  geom_histogram(stat = "count") + 
-  coord_flip()
-
-#Here's a faceted plot showing # of deaths by # of conflicts
-p <- ggplot(dat, aes(x = total, y = fatalities, color = event_type))+
-  geom_point(alpha = .6)+
-  scale_color_viridis_d(option = "magma")
-
-p
-
-p + facet_wrap(~dat$event_type)
-
-
-#Practice making a running bar chart
-
-
-
-#A larger pull of data that is undefined as of 12/4/2020
-test <- acled.api(
-  email.address = "calhoon.brian@gmail.com"
-  , access.key = "6X5B*acL3iUtvyKaIKml"
-  , region = "Western Africa"
-  , start.date = "2018-01-01"
-  , end.date = "2020-12-01"
-  , dyadic = FALSE
-)
