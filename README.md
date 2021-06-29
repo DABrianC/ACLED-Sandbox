@@ -1,2 +1,2 @@
 # ACLED-Sandbox
-I'm interested in different ways to visualize data so I pulled a month of ACLED data from West Africa. So, here it is. The code will continue to evolve over the coming months.
+The Armed Conflict Location and Event Data (ACLED) team has created an impressive and accessible online repository of "dates, actors, locations, fatalities, and types of all reported political violence and protest events across Africa, the Middle East, Latin America & the Caribbean, East Asia, South Asia, Southeast Asia, Central Asia & the Caucasus, Europe, and the United States of America." 
