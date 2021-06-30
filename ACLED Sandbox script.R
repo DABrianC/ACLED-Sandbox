@@ -11,7 +11,9 @@ library(gganimate)
 
 ###access data at ACLED website using personal key, www.acleddatacom 
 
-#I used the api and my user key to download data, and then I wrote it to Excel. 
+#I used the api and my user key to download data, 
+# and then I wrote it to Excel. 
+
 #I made an Excel file 
 write_xlsx(test, "WAconflicts202001.xlsx")
 
