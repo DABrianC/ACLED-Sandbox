@@ -14,7 +14,23 @@ library(gganimate)
 #I used the api and my user key to download data, 
 # and then I wrote it to Excel. 
 
+###This is 
 
+#This is the url with my personal key included
+url <- "https://api.acleddata.com/acled/read/?key=6X5B*acL3iUtvyKaIKml1234&email=calhoon.brian@gmail.com"
+
+#Western Africa January 2020 data
+test <- acled.api(
+  email.address = "calhoon.brian@gmail.com"
+  , access.key = "6X5B*acL3iUtvyKaIKml"
+  , region = "Western Africa"
+  , start.date = "2019-01-01"
+  , end.date = "2021-06-30"
+  , all.variables = TRUE
+  , dyadic = FALSE
+)
+
+write_xlsx(test, "WAconflicts202001.xlsx")
 
 #I made an Excel file 
 write_xlsx(test, "WAconflicts202001.xlsx")
