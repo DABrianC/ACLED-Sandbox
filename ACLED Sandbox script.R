@@ -14,6 +14,8 @@ library(gganimate)
 #I used the api and my user key to download data, 
 # and then I wrote it to Excel. 
 
+
+
 #I made an Excel file 
 write_xlsx(test, "WAconflicts202001.xlsx")
 
