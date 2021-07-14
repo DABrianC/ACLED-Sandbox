@@ -21,8 +21,8 @@ url <- "https://api.acleddata.com/acled/read/?key=6X5B*acL3iUtvyKaIKml1234&email
 
 #Western Africa January 2020 data
 test <- acled.api(
-  email.address = "calhoon.brian@gmail.com"
-  , access.key = "6X5B*acL3iUtvyKaIKml"
+  email.address = ""
+  , access.key = ""
   , region = "Western Africa"
   , start.date = "2019-01-01"
   , end.date = "2021-06-30"
